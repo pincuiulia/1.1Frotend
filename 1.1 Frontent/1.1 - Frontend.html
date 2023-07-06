@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <style>
+#section2{
+    background-color: #edd8b6;
+}
+
+a {
+  color: #000000;
+}
+
+#form div {
+    margin-bottom: 5px;
+}
+
+#position p {
+    position: absolute;
+    right: 0;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+}
+
+  </style>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>A small quiz</title>
+  </head>
+
+  <body>
+    <!-- Start Section 1 -->
+    <section>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet</p>
+        <h3>Lorem ipsum dolor sit amet</h3>
+    </section>
+      
+    <!-- End Section 1 -->
+
+    <section id="section2">
+      <!-- Start Section 2 -->
+      <a href="https://jrenterprising.ro/">eiusmod tempor incididunt</a>
+      <!-- End Section 2 -->
+    </section>
+
+    <section id="form">
+      <h2>Is this a secondary title ?</h2>
+
+      <form>
+        <div>
+          <label for="inputText"> What is this input ? </label>
+
+          <input id="inputText" type="text"  value="" maxlength="2"/>
+        </div>
+
+        <div>
+          <label for="input-select">What kind of input is this ?</label>
+
+          <select name="inputs" id="input-select">
+            <option value="">--Please choose an option--</option>
+            <option value="text">Text</option>
+            <option value="date">Date</option>
+            <option value="select">Select</option>
+            <option value="email">Email</option>
+          </select>
+        </div>
+      </form>
+    </section>
+
+    <section id="position">
+      <p>Excepteur sint occaecat cupidatat non proident</p>
+    </section>
+
+    <!-- Start Section 3 -->
+    <footer>
+        <p>Ut enim ad minim veniam</p>
+    </footer>
+    <!-- End Section 3 -->
+  </body>
+
+  <script>
+    const testArray = [1, 2, 3];
+
+    const fooBarObject = {
+      foo: 1,
+      bar: false,
+    };
+
+    function notUpdateFooBar() {
+      const copy = fooBarObject;
+
+      copy.bar = true;
+   
+      console.log(fooBarObject, copy);
+    }
+
+    notUpdateFooBar();
+
+    function isNullOrUndefined(value) {
+    if (value === null || typeof value === 'undefined') {
+        return true;
+    }
+    return false;
+    }
+
+    const value1 = null;
+    console.log(isNullOrUndefined(value1)); 
+
+    const value3 = 'Minciuna';
+    console.log(isNullOrUndefined(value3));
+
+    function increasedbyone(array){
+        for(let i=0;i<array.length;++i){
+            array[i]=array[i]+1;
+        }
+    }
+
+   increasedbyone(testArray);
+   for(let i=0;i<testArray.length;++i)
+   console.log(testArray[i]);
+
+   function getAllANodes() {
+    return document.getElementsByTagName('a');
+}
+
+
+const aNodes = getAllANodes();
+console.log(aNodes);
+
+
+  </script>
+</html>
+
+<!--
+HTML
+1) What is the title of this HTML page? 
+*"A small quiz"
+
+2) Add in Section 1 in this order: Most important (biggest) Heading, a Paragraph, The least important (smallest) Heading. Each tag should contain this text: "Lorem ipsum dolor sit amet"; 
+
+3) Add in Section 2 a link tag that should point to this website: "https://jrenterprising.ro/". When clicked this link should open in a new tab and the text inside the tag should be: "eiusmod tempor incididunt"; 
+
+4) Add in Section 3 a Footer and inside that tag create a Paragraph which should contain this text: "Ut enim ad minim veniam";
+
+5) For the input with the id="inputText", what property is missing so we can identify the value of the input?
+*value=""
+
+6) For the input with the id="inputText", what property should we add to limit the number of characters to 2?
+*maxlength="2"
+
+CSS - please make in the changes for CSS inside the style tag located at the beginning of the file;
+7) Using CSS please add a class that would change the background color of the tag with the id="section2" to: "#edd8b6". If this requires changes to the HTML, please update it;
+
+8) Using CSS please select all a tags and change their text color to "#000000";
+
+9) Using CSS please add a spacing of 5px between the 2 divs from the form;
+
+10) What is the default position of the div element ? What about the span element?
+*The default position for both is static
+
+11) Using CSS and position prop please align the p tag from section id="position" to right of the page;
+
+12) Using CSS and flexbox please align the section id="form" to the center of the page. Did you maintain the correct order of the elements in the page?
+*No
+
+JS - please make the changes in the script tag located at the bottom, near the closing HTML tag;
+13) Can you tell the difference between const and let as variable initialization?
+*The difference between const and let is that a variable const must be initialized from the begging while a let variable can be modified after declaration.
+
+14) Please write a function named isNullOrUndefined which should return true if the value is NULL or UNDEFINED. The function should receive 1 parameter. Don't forget to call the function;
+
+15) Please write a function name increaseByOne which should receive as a parameter an array of numbers and returns an array with each number increased by 1. Example: input: [1,2,3] -> output: [2,3,4]. You can use testArray to test; Don't forget to call the function;
+
+16) Please update the function notUpdateFooBar so that when we change the copy object we are affecting fooBarObject;
+*The copy acts as a reference to the fooBarObject, and in this way fooBarObject is automatically modified. The function does not require any modification
+
+17) Please write a function named getAllANodes that would return all the a tag DOM Nodes in the page;
+
+18) Please write a function named handleTextChange that should return the value from the input id="inputText" on every key stroke;
+*-
+19) Please write a function named handleSelectChange that should return the value from the select id="input-select" on value change;
+*-
+
+-->
